@@ -26,3 +26,10 @@
     transition: color 0s ease;
     text-decoration-color: rgba(var(--hover-color-RGB), 0.8);
 }
+
+.content {
+    width: 70%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 1em auto;
+}
