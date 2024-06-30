@@ -208,7 +208,7 @@ html {
 }
 
 body {
-  padding: 1em 10em;
+  padding: 1em 2em;
   font-family: "PTSans";
   color: var(--text-color);
   font-size: clamp(1rem, 0.513vw + 0.885rem, 1.5rem);
