@@ -91,7 +91,7 @@
   height: 80px;
   position: relative;
   border-radius: 10em;
-  top: 20px;
+  top: 15px;
 }
 
 .nav {
@@ -175,10 +175,10 @@ h2 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.8em;
   margin-top: 0;
   margin-bottom: 0.4em;
-  line-height: 1.3em;
+  line-height: 1.2em;
   font-weight: 400;
 }
 
@@ -207,12 +207,26 @@ html {
   scroll-behavior: smooth;
 }
 
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 1em auto;
+
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    min-width: auto;
+    padding: 0 0.5em;
+  }
+}
+
 body {
   padding: 1em 2em;
   font-family: "PTSans";
   color: var(--text-color);
-  font-size: clamp(1rem, 0.513vw + 0.885rem, 1.5rem);
-  line-height: clamp(1.5rem, 0.462vw + 1.396rem, 1.95rem);
+  font-size: clamp(1.125rem, 0.714vw + 0.964rem, 1.5rem);
+  line-height: clamp(1.688rem, 0.5vw + 1.575rem, 1.95rem);
   margin: 0;
   background-color: rgb(247, 240, 235);
 
@@ -247,7 +261,7 @@ div p {
 
 img {
   width: 100%;
-  border-radius: 0.4em;
+  border-radius: 0.2em;
 }
 /* Menu */
 .menu {
