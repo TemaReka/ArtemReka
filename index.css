@@ -27,17 +27,3 @@
     text-decoration-color: rgba(var(--hover-color-RGB), 0.8);
 }
 
-.content {
-    width: 70%;
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto 1em auto;
-
-    
-    @media (min-width: 1200px) {
-        width: 70%;
-        position: relative;
-        max-width: 1200px;
-        margin: 0 auto 1em auto;
-    }
-}
