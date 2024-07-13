@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Артём Река</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/favicon/favicon.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <main>
+      <section class="content">
+        <a href="index.html">Главная</a>
+
+        <div class="space_md"></div>
+
+        <h1>Переверстка таблицы про виды хомо</h1>
+
+        <span class="youtube" onclick="window.open('https://www.youtube.com/watch?v=kTz76XSYjHE&t=12s', '_blank')"
+        style="cursor: pointer"><img src="images/svg/youtube.svg" alt=""><a href="#">Подробный разбор на ютубе</a></span>
+
+        <div class="space_md"></div>
+        <h2>Изначальная таблица и ее проблемы</h2>
+
+        <div class="space_sm"></div>
+        <img src="images/homo.png" alt="" class="md-size">
+
+        <div class="space_sm"></div>
+        <p>Я исхожу из предположения, что абстрактный усредненный посетитель хочет с помощью этой таблицы увидеть разницу между своими предками. Но оболочка не дает ему удобной возможности для этого. </p>
+        <p>В таблице много цифр и диапазонов, которые надо держать в голове, чтобы сравнить. Большое количество несгруппированных колонок делает таблицу визуально сложнее.</p>
+        <p>А самое главное — теряется потенциал данных, которые можно превратить в легкую и интересную визуализацию.</p>
+
+        <div class="space_md"></div>
+        <h2>Моя таблица и решение проблем</h2>
+
+        <div class="space_sm"></div>
+        <img src="images/homoReview.png" alt="">
+
+        <div class="space_md"></div>
+        <p>Теперь таблица выполняет свою функцию — помогает сравнивать виды людей. Фотки оживляют мертвые названия видов. Визуализация числовых диапазонов помогает сравнивать как средние значения, так и разброс. Флаги показывают дополнительную информацию. Кусочки с глобуса показывают, насколько был расселен вид, а не просто говорят, где он обитал.</p>
+
+        <div class="space_sm"></div>
+        <a href="images/homoDone.jpg" target="_blank">Таблица без подписей</a>
+      </section>  
+    </main>
+
+
+    <script>
+      let observer = new IntersectionObserver((elements)=>{
+        elements.forEach((el) => {
+          if(el.intersectionRatio > .3) {
+            el.target.classList.remove("sleep");
+          } else {
+            el.target.classList.add("sleep");
+          }
+        })
+      }, {threshold: [0, .5]});
+
+      document.querySelectorAll('.awake').forEach(el => {
+        observer.observe(el);
+      })
+    </script>
+  </body>
+
+</html>

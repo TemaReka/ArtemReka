@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Артём Река</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/favicon/favicon.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <main>
+      <section class="content">
+        <a href="index.html">Главная</a>
+
+        <div class="space_md"></div>
+
+        <h1>Переверстка таблицы про доставку</h1>
+
+        <span class="youtube" onclick="window.open('https://youtu.be/Cl7-QXdwKLQ?si=EK5asO0L31Sl4R9J', '_blank')"
+        style="cursor: pointer"><img src="images/svg/youtube.svg" alt=""><a href="#">Подробный разбор на ютубе</a></span>
+
+        <div class="space_md"></div>
+        <h2>Изначальная таблица и ее проблемы</h2>
+
+        <div class="space_sm"></div>
+        <img src="images/delivery/delivery-review.png" alt="" class="md-size">
+        <div class="space_sm"></div>
+        <p>Таблица нужна, чтобы человек из конкретного региона сравнил разные способы доставки. Но сейчас это сделать трудно, информацию об условиях доставки приходится искать в левой и правой частях таблицы. Если хочется сравнить разные способы доставки, то так придется сделать три раза — по разу на каждый способ.</p>
+        <div class="space_md"></div>
+        <h2>Моя таблица и решение проблем</h2>
+
+        <div class="space_sm"></div>
+        <img src="images/deliveryDone.jpg" alt="" class="md-size">
+
+        <div class="space_sm"></div>
+        <p>Сгруппировал инфомацию, у таблицы появилась четкая структура. Теперь с первого взгляда понятно, что таблица хочет сказать. Остается только сравнить колонки.</p>
+      </section>
+      </main>
+
+
+    <script>
+      let observer = new IntersectionObserver((elements)=>{
+        elements.forEach((el) => {
+          if(el.intersectionRatio > .3) {
+            el.target.classList.remove("sleep");
+          } else {
+            el.target.classList.add("sleep");
+          }
+        })
+      }, {threshold: [0, .5]});
+
+      document.querySelectorAll('.awake').forEach(el => {
+        observer.observe(el);
+      })
+    </script>
+  </body>
+
+</html>

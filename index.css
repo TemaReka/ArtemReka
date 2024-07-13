@@ -1,0 +1,29 @@
+.contacts {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+
+    @media (min-width: 360px) and (max-width: 700px) {
+        flex-direction: column;
+    }
+}
+
+.image-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.image-gallery-item:hover a {
+    color: rgba(var(--hover-color-RGB), 1);
+    cursor: pointer;  
+    transition: color 0s ease;
+    text-decoration-color: rgba(var(--hover-color-RGB), 0.8);
+}
+

@@ -1,0 +1,281 @@
+/*  Font  */
+
+@font-face {
+  font-family: "PTSans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("fonts/ptsans.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PTSans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("fonts/ptsansbold.woff2") format("woff2");
+}
+
+
+/*  Design System  */
+.md-size {
+  width: 70%;
+
+  @media (min-width: 360px) and (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.sm-size {
+  width: 40%;
+}
+
+.img-txt {
+  display: flex;
+  gap: 2em;
+  align-items: unset;
+
+  @media (min-width: 360px) and (max-width: 700px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.img-txt.only-row {
+  flex-direction: row;
+  gap: 2em;
+}
+
+.img-txt div:nth-child(n) {
+  flex: 1;
+}
+
+.img-txt div:nth-child(1) {
+  @media (min-width: 360px) and (max-width: 700px) {
+    order: 2;
+  }
+}
+
+.img-txt div:nth-child(2) {
+  @media (min-width: 360px) and (max-width: 700px) {
+    order: 1;
+  }
+}
+
+.img-txt-grid {
+  display: flex;
+  gap: 0em;
+
+  @media (min-width: 360px) and (max-width: 700px) {
+    flex-direction: column;
+  }
+}
+
+.img-txt-grid div:nth-child(1) {
+  flex: 7;
+}
+
+.img-txt-grid div:nth-child(2) {
+  flex: 3;
+}
+
+.img-txt-grid div:nth-child(n) p, .img-txt-grid div:nth-child(2) img {
+  padding-left: 1em;
+  border-radius: 0.4em;
+
+  @media (min-width: 360px) and (max-width: 700px) {
+    padding-left: 0;
+  }
+}
+
+.me {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 10em;
+  top: 15px;
+}
+
+.nav {
+  display: flex;
+  gap: 0.5em;
+  align-items: baseline;
+}
+
+.nav img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Start button */
+.youtube img {
+  width: 32px;
+  height: 32px;
+}
+
+.youtube a {
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.youtube {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15em 0.6em 0.25em 0.6em;
+  background-color: rgba(var(--button-color), 0.5);
+  gap: 0.2em;
+  border-radius: 0.4em;
+}
+
+span.youtube:hover a {
+  color: rgba(var(--hover-color-RGB), 1);
+  cursor: pointer;  
+  transition: color 0s ease;
+  text-decoration-color: rgba(var(--hover-color-RGB), 0.8);
+}
+
+.mb-hide {
+  @media (min-width: 360px) and (max-width: 700px) {
+    display: none;
+  }
+}
+
+/* Variables */
+:root {
+  --text-color-RGB: 50, 50, 50;
+  --link-color-RGB: 50, 100, 200;
+  --hover-color-RGB: 50, 200, 100;
+  --button-color: 255, 223, 149;
+
+  --text-color: rgba(50, 50, 50, 1);
+  --accent-color: rgba(50, 150, 150, 1);
+  --link-color: rgba(50, 100, 200, 1);
+  --hover-color: rgba(50, 200, 100, 1);
+
+  --grid-item-margin: 1em;
+  --small-gap: 1em;
+  --grey: rgba(0, 0, 0, 0.118);
+  --md-gap: 3em;
+  --lg-gap: 5em;
+  --tilda-promo-bg: #f7eee9;
+  --mondial-pack-bg: #e0f4db;
+
+  --padding__ds: 2em;
+  --padding__mb: 1em;
+  
+  
+}
+
+
+/* Heading */
+h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 0.4em;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration-thickness: 0.1px;
+  text-underline-offset: 0.2em;
+  transition: color 0.4s ease;
+  text-decoration-color: rgba(var(--link-color-RGB), 0.3);
+}
+
+a:hover {
+  color: rgba(var(--hover-color-RGB), 1);
+  cursor: pointer;  
+  transition: color 0s ease;
+  text-decoration-color: rgba(var(--hover-color-RGB), 0.8);
+}
+
+/* Basic */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 1em auto;
+
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    min-width: auto;
+    padding: 0 0.5em;
+  }
+}
+
+body {
+  padding: 1em 2em;
+  font-family: "PTSans";
+  color: var(--text-color);
+  font-size: clamp(1.125rem, 0.714vw + 0.964rem, 1.5rem);
+  line-height: clamp(1.688rem, 0.5vw + 1.575rem, 1.95rem);
+  margin: 0;
+  background-color: rgb(247, 240, 235);
+
+  @media (min-width: 360px) and (max-width: 700px) {
+    padding: 1em 1em;
+  }
+}
+
+/* Gaps */
+.space_XL {
+  height: 5em;
+}
+.space_md {
+  height: 2em;
+}
+.space_sm {
+  height: 0.5em;
+}
+
+p {
+  margin-top: 0;
+  width: 70%;
+  margin-bottom: 0.5em;
+  @media (min-width: 360px) and (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+div p {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.2em;
+}
+/* Menu */
+.menu {
+  display: flex;
+  gap: 1em;
+}
+
+.menu a {
+  padding: 0.3em 1em 0.4em 1em;
+  background-color: #fcf6bd;
+  border-radius: 0.2em;
+}
+
+
+/* Layout */
+
+/*Media Queries*/

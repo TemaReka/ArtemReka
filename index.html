@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Артём Река</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/favicon/favicon.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <main>
+      <!-- <section class="menu">
+        <a href="">Главная</a>
+        <a href="">Работы</a> 
+      </section> -->
+      <section class="content">
+       <div class="img-txt only-row"><h1>Привет, я Артём. Дизайнер.<br>Помогаю доносить информацию.</h1>  <img src="images/me@2x.jpg" alt="" class="me"></div> 
+
+       <p>Если вам надо рассказать о вашем продукте или сделать для него удобную оболочку — велком. </p>
+
+      <section class="contacts">
+        <a href="https://t.me/Ignoteit" target="_blank">Телеграм</a>
+        <a href="https://vk.com/sortaf" target="_blank">ВК</a>
+        <a href="mailto:kadetar2003@gmail.com" target="_blank">kadetar2003@gmail.com</a>
+      </section>
+
+      <div class="space_md"></div>
+      <h2>Переверстка таблиц</h2>
+      <div class="image-gallery">
+
+        <div class="image-col">
+          <div class="image-gallery-item" onclick="location.href='homo.html';"
+          style="cursor: pointer"><img src="images/homoDone.jpg" alt=""><a href="homo.html">Виды хомо</a></div>
+          <div class="image-gallery-item" onclick="location.href='delivery.html';"
+          style="cursor: pointer"><img src="images/deliveryDone.jpg" alt=""><a href="delivery.html">Сроки доставки</a></div>
+          <div class="image-gallery-item" onclick="location.href='license.html';"
+          style="cursor: pointer"><img src="images/licenseNarrowDone.jpg" alt="" class="sm-on-mobile"><a href="license.html">Сдача жилья</a></div>
+        </div>
+
+        <div class="image-col">
+          <div class="image-gallery-item" onclick="location.href='bank.html';"
+          style="cursor: pointer"><img src="images/rankDone.jpg" alt=""><a href="bank.html">Рэнкинг банков</a></div>
+          <div class="image-gallery-item" onclick="location.href='schedule.html';"
+          style="cursor: pointer"><img src="images/invitroDone.jpg" alt=""><a href="schedule.html">Расписание врачей</a></div>
+          <div class="image-gallery-item" onclick="location.href='audience.html';"
+          style="cursor: pointer"><img src="images/audienceDone.jpg" alt=""><a href="audience.html">Расписание аудиторий</a></div>
+        </div>
+      </div>
+
+      <div class="space_md"></div>
+      <h2>Сайты</h2>
+
+      <div class="image-gallery">
+
+        <div class="image-col">
+          <div class="image-gallery-item" onclick="location.href='tildaPromo.html';"
+          style="cursor: pointer"><img src="images/tilda-promo/thumbnail.jpg" alt=""><a href="tildaPromo.html">Промо страница курса по Тильде</a></div>
+        </div>
+
+        <div class="image-col">
+          <div class="image-gallery-item" onclick="location.href='packagingMachines.html';"
+          style="cursor: pointer"><img src="images/packaging-machines/thumbnail.jpg" alt=""><a href="packagingMachines.html">Сайт про упаковочные машины</a></div>
+        </div>
+      </div>
+    </section>
+    </main>
+
+
+    <script>
+      let observer = new IntersectionObserver((elements)=>{
+        elements.forEach((el) => {
+          if(el.intersectionRatio > .3) {
+            el.target.classList.remove("sleep");
+          } else {
+            el.target.classList.add("sleep");
+          }
+        })
+      }, {threshold: [0, .5]});
+
+      document.querySelectorAll('.awake').forEach(el => {
+        observer.observe(el);
+      })
+    </script>
+  </body>
+
+</html>
