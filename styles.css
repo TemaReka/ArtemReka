@@ -69,6 +69,7 @@
   }
 }
 
+
 .img-txt-grid div:nth-child(1) {
   flex: 7;
 }
@@ -262,6 +263,7 @@ div p {
 img {
   width: 100%;
   border-radius: 0.2em;
+  margin-bottom: 0.5em;
 }
 /* Menu */
 .menu {
