@@ -78,7 +78,7 @@
 }
 
 .img-txt-grid div:nth-child(n) p, .img-txt-grid div:nth-child(2) img {
-  padding-left: 1em;
+  margin-left: 1em;
   border-radius: 0.4em;
 
   @media (min-width: 360px) and (max-width: 700px) {
