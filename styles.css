@@ -69,7 +69,6 @@
   }
 }
 
-
 .img-txt-grid div:nth-child(1) {
   flex: 7;
 }
@@ -79,7 +78,7 @@
 }
 
 .img-txt-grid div:nth-child(n) p, .img-txt-grid div:nth-child(2) img {
-  margin-left: 1em;
+  padding-left: 1em;
   border-radius: 0.4em;
 
   @media (min-width: 360px) and (max-width: 700px) {
@@ -112,7 +111,7 @@
   height: 32px;
 }
 
-.youtube a {
+a.youtube {
   font-size: 1em;
   text-decoration: none;
 }
@@ -126,7 +125,7 @@
   border-radius: 0.4em;
 }
 
-span.youtube:hover a {
+.youtube:hover a {
   color: rgba(var(--hover-color-RGB), 1);
   cursor: pointer;  
   transition: color 0s ease;
@@ -199,6 +198,29 @@ a:hover {
   text-decoration-color: rgba(var(--hover-color-RGB), 0.8);
 }
 
+.after-links {
+  display: inline-flex;
+  gap: 1.5em;
+}
+
+.main-link {
+  display: inline-block;
+  position: relative;
+}
+.main-link a::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: -20px;    /* Увеличение кликабельной области вверх */
+  bottom: -20px; /* Увеличение кликабельной области вниз */
+  left: -20px;   /* Увеличение кликабельной области влево */
+  right: -20px;  /* Увеличение кликабельной области вправо */
+}
+.main-link a {
+  position: relative; /* Сохраняем ссылку на месте */
+  z-index: 1;         /* Переносим ссылку над псевдоэлементом */
+}
+
 /* Basic */
 * {
   box-sizing: border-box;
@@ -263,7 +285,6 @@ div p {
 img {
   width: 100%;
   border-radius: 0.2em;
-  margin-bottom: 0.2em;
 }
 /* Menu */
 .menu {
