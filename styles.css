@@ -44,7 +44,7 @@
   gap: 2em;
 }
 
-.column {flex-direction: column;}
+.column {display: flex; flex-direction: column; gap: 2em;}
 
 .img-txt div:nth-child(n) {
   flex: 1;
