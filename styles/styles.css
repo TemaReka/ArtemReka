@@ -309,7 +309,7 @@ body {
   scroll-behavior: smooth;
 }
 body h1 {
-  font-size: 4em;
+  font-size: 3.5em;
   line-height: 1.1em;
   font-family: var(--font-family-accent);
   font-weight: bold;
